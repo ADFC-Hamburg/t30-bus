@@ -1,0 +1,10 @@
+.cache/
+dist/*.png
+dist/*.eot
+dist/*.woff2
+dist/*.woff
+dist/*.svg
+dist/*.ttf
+dist/main.js
+node_modules/
+yarn-error.log
