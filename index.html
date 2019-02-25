@@ -1,0 +1,49 @@
+<html lang="de">
+  <head>
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="my.css">
+    <title>Was bedeutet Tempo 30 auf der B73 f&uuml;r den Bus 141?</title>
+  </head>
+  <body>
+    <h1>Test der Geschwindigkeitsermittlung einer Busfahrt</h1>
+    <p>Stecke: Harburg -> Hausbruch am Sonntag 16.12.2019</p>
+    <div id="map"></div>
+    <a href="#" id="btnGoOn"><i class="fa fa-play"></i></a>
+    <a href="#" id="btnStop"><i class="fa fa-pause"></i></a>
+    <a href="#" id="btnStartBegin"><i class="fa fa-redo"></i></a>
+    <table>
+      <tr>
+        <th>Zeit</th><td id="counter"></td>
+      </tr>
+      <tr>
+        <th>Distanz zw. T30 und T50 Bus</th><td id="distanz"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>Was</th><th>Tempo 50 Bus</td><th>Tempo 30 Bus</th>
+      </tr>
+      <tr>
+        <th>Geschwindigkeit</th><td id="geschw50"></td><td id="geschw30"></td>
+      </tr>
+      <tr>
+        <th>Harburg ab</th><td>13:26:22 Uhr</td><td>13:26:22 Uhr</td>
+      </tr>
+      <tr>
+        <th>Harburg Rathaus an</th><td id="ankunftHR50"></td><td id="ankunftHR30"></td>
+      </tr>
+      <tr>
+        <th>Moorburger Str. an</th><td id="ankunftMS50"></td><td id="ankunftMS30"></td>
+      </tr>
+      <tr>
+        <th>Hausbruch an</th><td id="ankunft50"></td><td id="ankunft30"></td>
+      </tr>
+    </table>
+    Datei: <a href="test.gpx">test.gpx</a>    <a href="#" id="btnDetails">Zeige Details</a>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/@turf/turf/turf.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
