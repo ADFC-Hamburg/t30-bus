@@ -1,3 +1,9 @@
+import './node_modules/leaflet/dist/leaflet.css';
+import './node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+import './my.css'
+import './node_modules/jquery/dist/jquery.min.js';
+import './node_modules/leaflet/dist/leaflet.js';
+import './node_modules/@turf/turf/turf.min.js';
 
 var map;
 var ajaxRequest;
