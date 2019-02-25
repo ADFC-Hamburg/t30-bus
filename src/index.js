@@ -1,3 +1,5 @@
+'use strict';
+
 require('@fortawesome/fontawesome-free/css/all.css');
 import css from './my.css';
 import $ from 'jquery';
@@ -15,8 +17,6 @@ L.Icon.Default.mergeOptions({
 var map;
 var tmax1, tmax2;
 var ajaxRequest;
-var plotlist;
-var plotlayers=[];
 var marker30, marker50;
 var group;
 function initmap() {
