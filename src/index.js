@@ -1,5 +1,19 @@
+require('@fortawesome/fontawesome-free/css/all.css');
+import css from './my.css';
+import $ from 'jquery';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
+/* This code is needed to properly load the images in the Leaflet CSS */
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 var map;
+var tmax1, tmax2;
 var ajaxRequest;
 var plotlist;
 var plotlayers=[];
@@ -69,9 +83,9 @@ $.ajax({
             time=Date.parse(timestr)/1000;
         if (oldtime) {
             var tr=$('<tr>');
-            var pt1=turf.point([lon,lat]);
-            var pt2=turf.point([oldlon,oldlat]);
-            var dist=turf.distance(pt1,pt2)*1000;
+            var pt1=L.latLng([lat,lon]);
+            var pt2=L.latLng([oldlat,oldlon]);
+            var dist=pt1.distanceTo(pt2);
             var dtime=time-oldtime;
             t=t+dtime;
             tr.append($('<td>').text(timestr));
